@@ -20,6 +20,6 @@ public class TaxType {
     @Column(nullable = false, unique = true)
     private String code; // e.g. "TVA"
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private String description;
 }

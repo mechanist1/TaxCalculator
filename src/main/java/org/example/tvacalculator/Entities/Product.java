@@ -18,15 +18,15 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
 
-    @Column(unique=false, nullable=false)
+    @Column(unique=false, nullable=true)
     String name;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "category_id", nullable = false)
+    @JoinColumn(name = "category_id", nullable = true)
     private ProductCategory category;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "origin_country_id", nullable = false)
+    @JoinColumn(name = "origin_country_id", nullable = true)
     private Country originCountry;
 
 }

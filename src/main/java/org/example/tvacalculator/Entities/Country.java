@@ -17,7 +17,7 @@ public class Country {
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id ;
 
-    @Column(unique=true, nullable=false)
+    @Column(unique=true)
     String name ;
 
 

@@ -21,21 +21,21 @@ public class TaxRule {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "country_id", nullable = false)
+    @JoinColumn(name = "country_id")
     private Country country;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "category_id", nullable = false)
+    @JoinColumn(name = "category_id")
     private ProductCategory category;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "tax_type_id", nullable = false)
+    @JoinColumn(name = "tax_type_id")
     private TaxType taxType;
 
     @Column(nullable = false, precision = 10, scale = 4)
     private BigDecimal rate; // e.g. 0.19 for 19%
 
-    @Column(name = "effective_from", nullable = false)
+    @Column(name = "effective_from")
     private LocalDate effectiveFrom;
 
     @Column(name = "effective_to")
